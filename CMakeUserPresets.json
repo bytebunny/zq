@@ -15,8 +15,8 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "VCPKG_TARGET_TRIPLET": "x64-rtc-triplet",
-                "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/cmake",
-                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/cmake/rtc-toolchain.cmake"
+                "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/cmake"
+                //"VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/cmake/rtc-toolchain.cmake"
             }
         }
     ],
