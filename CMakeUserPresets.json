@@ -1,0 +1,43 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 27,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "rtc-debug",
+            "displayName": "RTC: Debug configuration",
+            "inherits": "base",
+            //"toolchainFile": "${sourceDir}/cmake/x64-rtc-vcpkg.cmake",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "VCPKG_TARGET_TRIPLET": "x64-rtc-triplet",
+                "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/cmake",
+                "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/cmake/rtc-toolchain.cmake"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "rtc-debug",
+            "configurePreset": "rtc-debug",
+            "configuration": "Debug"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "rtc-debug",
+            "configurePreset": "rtc-debug",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "noTestsAction": "error",
+                "stopOnFailure": true
+            }
+        }
+    ]
+}

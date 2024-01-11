@@ -1,0 +1,12 @@
+if(NOT CMAKE_C_STANDARD)
+  set(CMAKE_C_STANDARD 11)
+endif()
+set(CMAKE_C_STANDARD_REQUIRED ON)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_ENABLE_EXPORTS TRUE) # Enables exporting of symbols, neccessary for reading of callstack symbols
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
